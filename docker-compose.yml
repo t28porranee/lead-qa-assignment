@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  app:
+    build: ./app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=test
+
+  tests:
+    build: ./tests
+    depends_on:
+      - app
+    environment:
+      - BASE_URL=http://app:3000
+    command: ["npx", "playwright", "test"]
