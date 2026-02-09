@@ -65,6 +65,11 @@ Test Scenario:Refresh the page and verify the cart still contains the item.
 Why critical:Cart loss is one of the most common causes of cart abandonment in e-commerce.
 
 ## A3. Implement automated tests (required)
+### How to Build
+- clone repo to you computer
+- access to folder via terminal and run build command
+- docker compose up --build
+### Local SUT
 - Local url: http://localhost:3000
 - Product url:http://localhost:3000/products
 - Cart url:http://localhost:3000/cart
